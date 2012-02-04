@@ -1,0 +1,65 @@
+a {
+	color:black;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+ul#timeline {
+	list-style-type:none;
+	padding:0;
+	margin:0;	
+	border-left:0.5em solid #FF8800;
+
+	width:25em;
+	margin-left:25em;
+}
+
+.item {
+	padding:0.5em 0.5em 0.25em 0.5em;
+	margin:0.5em 0 0.5em 0;
+	width:23.5em;
+	border-bottom:0.2em solid #55524E;
+}
+
+.left {
+	margin-left:-25em;
+}
+
+.full { 
+	padding:0.5em;
+	margin:2em 0 2em -25em;
+	width:48.25em;
+	border:0.25em solid #FF8800;
+	background:white;
+	text-align:center;
+}
+
+li.vorstand {
+	background:#DDD9D9;
+}
+
+li.stammtisch {
+	background:#DDD9D9;
+}
+
+.pm a {
+	font-style:italic;
+}
+
+.pm p {
+	text-align:right;
+	margin:0;
+	font-size:0.6em;
+}
+
+.mitglieder_versammlung p {
+	font-size:1.2em;
+	margin:0 0 0.5em 0;
+}
+
+.sonstiges p {
+	font-size:1.2em;
+	margin:0 0 0.5em 0;
+}
