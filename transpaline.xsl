@@ -17,11 +17,19 @@
 			<title>Transpaline</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 			<link rel="stylesheet" type="text/css" href="main.css" />
+			<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+			<script type="text/javascript" src="selection.js"></script>
 		</head>
 
 		<body>
 
 		<h1>Zeitleiste des KV Konstanz</h1>
+
+		<input type="checkbox" id="versammlungCheck" checked="yes"/> Mitgliederversammlungen<br/>
+		<input type="checkbox" id="vorstandCheck" checked="yes"/> Vorstandssitzungen<br/>
+		<input type="checkbox" id="stammtischCheck" checked="yes"/> Stammtische<br/>
+		<input type="checkbox" id="presseCheck" checked="yes"/> Pressemitteilungen<br/>
+		<input type="checkbox" id="sonstigesCheck" checked="yes"/> Wahlen<br/>
 
 		<ul id="timeline">
 
