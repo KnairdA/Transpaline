@@ -36,6 +36,24 @@ ul#timeline {
 	text-align:center;
 }
 
+.first {
+	padding:0.5em;
+	margin:0 0 4em -10em;
+	width:18.25em;
+	border:0.5em solid #FF8800;
+	background:white;
+	text-align:center;
+}
+
+.first p {
+	margin:0;
+	font-size:2em;
+}
+
+.last {
+	margin:4em 0 0 -10em;
+}
+
 li.vorstand {
 	background:#DDD9D9;
 }
