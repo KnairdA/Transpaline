@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
 	$('#stammtischCheck').click(function() {
-  		checked = $(this);
-
-  		if ( checked.is(':checked') ) {
+  		if ( $(this).is(':checked') ) {
   			$('.stammtisch').fadeIn('slow');
   		}
   		else {
@@ -12,9 +10,7 @@ $(document).ready(function() {
 	});
 
 	$('#presseCheck').click(function() {
-  		checked = $(this);
-
-  		if ( checked.is(':checked') ) {
+  		if ( $(this).is(':checked') ) {
   			$('.pm').fadeIn('slow');
   		}
   		else {
@@ -23,9 +19,7 @@ $(document).ready(function() {
 	});
 
 	$('#vorstandCheck').click(function() {
-  		checked = $(this);
-
-  		if ( checked.is(':checked') ) {
+  		if ( $(this).is(':checked') ) {
   			$('.vorstand').fadeIn('slow');
   		}
   		else {
@@ -34,9 +28,7 @@ $(document).ready(function() {
 	});
 
 	$('#sonstigesCheck').click(function() {
-  		checked = $(this);
-
-  		if ( checked.is(':checked') ) {
+  		if ( $(this).is(':checked') ) {
   			$('.sonstiges').fadeIn('slow');
 
   		}
@@ -46,9 +38,7 @@ $(document).ready(function() {
 	});
 
 	$('#versammlungCheck').click(function() {
-  		checked = $(this);
-
-  		if ( checked.is(':checked') ) {
+  		if ( $(this).is(':checked') ) {
   			$('.mitglieder_versammlung').fadeIn('slow');
   			
   		}
