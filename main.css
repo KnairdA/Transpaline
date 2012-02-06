@@ -39,19 +39,32 @@ ul#timeline {
 .first {
 	padding:0.5em;
 	margin:0 0 4em -10em;
-	width:18.25em;
+	width:17.75em;
 	border:0.5em solid #FF8800;
 	background:white;
 	text-align:center;
 }
 
-.first p {
+.first h1 {
 	margin:0;
+	font-weight:normal;
 	font-size:2em;
 }
 
 .last {
 	margin:4em 0 0 -10em;
+}
+
+#selectionBox {
+	margin-top:1em;
+	text-align:left;
+}
+
+#selectionBox h2 {
+	margin:0.25em;
+	font-weight:normal;
+	font-size:1.2em;
+	border-bottom:0.1em solid #DDD9D9;	
 }
 
 li.vorstand {

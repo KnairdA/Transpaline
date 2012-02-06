@@ -23,20 +23,18 @@
 
 		<body>
 
-		<h1>Zeitleiste des KV Konstanz</h1>
-
-		<div id="selectionBox">
-			<input type="checkbox" id="versammlungCheck" checked="yes"/> Mitgliederversammlungen<br/>
-			<input type="checkbox" id="vorstandCheck" checked="yes"/> Vorstandssitzungen<br/>
-			<input type="checkbox" id="stammtischCheck" checked="yes"/> Stammtische<br/>
-			<input type="checkbox" id="presseCheck" checked="yes"/> Pressemitteilungen<br/>
-			<input type="checkbox" id="sonstigesCheck" checked="yes"/> Wahlen<br/>
-		</div>
-
 		<ul id="timeline">
 
 		<li class="item first">
-			<p>Heute</p>
+			<h1>Zeitleiste des KV Konstanz</h1>
+			<div id="selectionBox">
+				<h2>Anzeige:</h2>
+				<input type="checkbox" id="versammlungCheck" checked="yes"/> Mitgliederversammlungen<br/>
+				<input type="checkbox" id="vorstandCheck" checked="yes"/> Vorstandssitzungen<br/>
+				<input type="checkbox" id="stammtischCheck" checked="yes"/> Stammtische<br/>
+				<input type="checkbox" id="presseCheck" checked="yes"/> Pressemitteilungen<br/>
+				<input type="checkbox" id="sonstigesCheck" checked="yes"/> Wahlen<br/>
+			</div>
 		</li>
 
 		<xsl:for-each select="item">
@@ -48,7 +46,7 @@
 		</xsl:for-each>
 
 		<li class="item first last">
-			<p>00.00.0000</p>
+			<h1>00.00.0000</h1>
 		</li>
 
 		</ul>
