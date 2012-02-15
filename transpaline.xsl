@@ -46,7 +46,7 @@
 		</xsl:for-each>
 
 		<li class="item first last">
-			<h1>00.00.0000</h1>
+			<h1>Urknall</h1>
 		</li>
 
 		</ul>
