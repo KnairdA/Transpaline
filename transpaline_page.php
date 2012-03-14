@@ -13,26 +13,14 @@ Template Name: Transpaline
 				</div>
 				<div class="post-content">
 					<?php
-					$sourcePage =  file_get_contents('http://wiki.piratenpartei.de/BW:Kreisverband_Konstanz/IT/Transparenz');
+					$source = get_transient( 'transpaline_source' );
 
-					if ($sourcePage != false)
+					if ($source != false)
 					{
-						$config = array('output-xhtml' => true, 'output-xml' => true);
-
-						$tidy = new tidy();
-
-						$xml = new DomDocument();
-						$xml->loadXML( $tidy->repairString($sourcePage, $config, 'UTF8') );
+						$xmlSource = new DomDocument();
+						$xmlSource->loadXML( $source );
 
 						$xsl = new DomDocument();
-
-						$xsl->load('wp-content/tool/transpaline/makexml_kvkn.xsl');
-						$xslt = new XsltProcessor();
-						$xslt->importStylesheet($xsl);
-
-						$xmlSource = new DomDocument();
-						$xmlSource->loadXML( $xslt->transformToXML($xml) );
-
 						$xsl->load('wp-content/tool/transpaline/transpalineEmbed.xsl');
 						$xslt = new XsltProcessor();
 						$xslt->importStylesheet($xsl);
