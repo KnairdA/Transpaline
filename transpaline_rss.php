@@ -1,32 +1,28 @@
 <?php
 
+require_once( '../../../wp-blog-header.php' );
+
 header("Content-Type: application/rss+xml");
 
-$sourcePage =  file_get_contents('http://wiki.piratenpartei.de/BW:Kreisverband_Konstanz/IT/Transparenz');
+$source = get_transient( 'transpaline_source' );
 
-if ($sourcePage != false)
+if ($source != false)
 {
-	$config = array('output-xhtml' => true, 'output-xml' => true);
-
-	$tidy = new tidy();
-
-	$xml = new DomDocument();
-	$xml->loadXML( $tidy->repairString($sourcePage, $config, 'UTF8') );
+	$xmlSource = new DomDocument();
+	$xmlSource->loadXML( $source );
 
 	$xsl = new DomDocument();
-
-	$xsl->load('makexml_kvkn.xsl');
-	$xslt = new XsltProcessor();
-	$xslt->importStylesheet($xsl);
-	
-	$xmlSource = new DomDocument();
-	$xmlSource->loadXML( $xslt->transformToXML($xml) );
-
 	$xsl->load('transpaline_rss.xsl');
 	$xslt = new XsltProcessor();
 	$xslt->importStylesheet($xsl);
 	
-	echo $xslt->transformToXML($xmlSource);
+	$content = $xslt->transformToXML($xmlSource);
+	echo $content;
+	
+	set_transient( 'transpaline_rss', $content, 2592000 );
+}
+else {
+	echo get_transient( 'transpaline_rss' );
 }
 
 ?>
