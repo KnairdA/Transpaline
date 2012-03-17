@@ -15,7 +15,7 @@ add_action('wp', 'activate_transpaline_update');
 
 function update_transpaline()
 {
-	$sourcePage =  file_get_contents('http://wiki.piratenpartei.de/BW:Kreisverband_Konstanz/IT/Transparenz');
+	$sourcePage =  file_get_contents('http://wiki.piratenpartei.de/wiki//index.php?title=BW:Kreisverband_Konstanz/IT/Transparenz&action=render');
 
 	if ($sourcePage != false)
 	{
