@@ -19,7 +19,7 @@
 <xsl:template match="x:div[@id='protokolle_vorstand']/x:ul">
 	<xsl:for-each select="x:li">
 		<item type="protokoll_vorstand">
-			<link>http://wiki.piratenpartei.de<xsl:value-of select="x:a/@href"/></link>
+			<link><xsl:value-of select="x:a/@href"/></link>
 			<date><xsl:value-of select="x:a"/></date>
 		</item>
 	</xsl:for-each>
@@ -58,7 +58,7 @@
 <xsl:template match="x:div[@id='presse_mitteilungen']/x:ul">
 	<xsl:for-each select="x:li">
 		<item type="presse_mitteilung">
-			<link>http://wiki.piratenpartei.de<xsl:value-of select="x:a/@href"/></link>
+			<link><xsl:value-of select="x:a/@href"/></link>
 			<description><xsl:copy-of select="normalize-space(x:a)"/></description>
 			<date><xsl:value-of select="concat(substring(.,7,4), '-', substring(.,4,2), '-',substring(.,1,2))"/></date>
 		</item>
@@ -68,7 +68,7 @@
 <xsl:template match="x:div[@id='protokolle_konstanz']/x:ul">
 	<xsl:for-each select="x:li">
 		<item type="protokoll_konstanz">
-			<link>http://wiki.piratenpartei.de<xsl:value-of select="x:a/@href"/></link>
+			<link><xsl:value-of select="x:a/@href"/></link>
 			<date><xsl:value-of select="normalize-space(x:a)"/></date>
 		</item>
 	</xsl:for-each>
@@ -77,7 +77,7 @@
 <xsl:template match="x:div[@id='protokolle_singen']/x:ul">
 	<xsl:for-each select="x:li">
 		<item type="protokoll_singen">
-			<link>http://wiki.piratenpartei.de<xsl:value-of select="x:a/@href"/></link>
+			<link><xsl:value-of select="x:a/@href"/></link>
 			<date><xsl:value-of select="normalize-space(x:a)"/></date>
 		</item>
 	</xsl:for-each>
@@ -86,7 +86,7 @@
 <xsl:template match="x:div[@id='protokolle_radolfzell']/x:ul">
 	<xsl:for-each select="x:li">
 		<item type="protokoll_radolfzell">
-			<link>http://wiki.piratenpartei.de<xsl:value-of select="x:a/@href"/></link>
+			<link><xsl:value-of select="x:a/@href"/></link>
 			<date><xsl:value-of select="normalize-space(x:a)"/></date>
 		</item>
 	</xsl:for-each>
