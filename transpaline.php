@@ -2,7 +2,7 @@
 
 header("Content-Type: text/html");
 
-$sourcePage =  file_get_contents('http://wiki.piratenpartei.de/wiki//index.php?title=BW:Kreisverband_Konstanz/IT/Transparenz&action=render');
+$sourcePage =  file_get_contents('http://api.piratenpartei-bw.de/wiki/getpagehtml/BW:Kreisverband_Konstanz/IT/Transparenz');
 
 if ($sourcePage != false)
 {
